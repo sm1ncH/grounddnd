@@ -38,7 +38,7 @@ try {
                 // Validate file type and extension
                 if (in_array($imageExtension, $allowedExtensions) && getimagesize($imageTmpPath)) {
                     $newImageFileName = md5(time() . $imageName) . '.' . $imageExtension;
-                    $destImagePath = $imageUploadDir . $newImageFileName;
+                    $destImagePath =  $newImageFileName;
 
                     if (move_uploaded_file($imageTmpPath, $destImagePath)) {
                         // Insert each image into the 'slika' table
