@@ -25,7 +25,7 @@ try {
             echo "<p>", htmlspecialchars($row['dat_zac']), "</p>";
             echo "<p>", htmlspecialchars($row['dat_kon']), "</p>";
             // button to delete specific booking
-            echo "<a href='delete_booking.php?id=" . $row['id'] . "'>Delete</a>";
+            echo "<p><a href='delete_booking.php?id=" . $row['id'] . "'>Delete</a></p>";
         }
     }
 } catch (PDOException $e) {

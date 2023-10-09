@@ -11,7 +11,7 @@ $booking_id = $_GET['id'];
 try {
     $stmt = $pdo->prepare("DELETE FROM bookings WHERE id = ?");
     $stmt->execute([$booking_id]);
-    header("Location: bookings.php?id=" . $_SESSION['id']);
+    header("Location: index.php");
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
