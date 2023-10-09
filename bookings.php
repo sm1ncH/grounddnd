@@ -17,7 +17,8 @@ try {
             echo "<p>", htmlspecialchars($row2['name']), "</p>";
             echo "<p>", htmlspecialchars($row2['surname']), "</p>";
             // date
-            echo "<p>", htmlspecialchars($row['date']), "</p>";
+            echo "<p>", htmlspecialchars($row['dat_zac']), "</p>";
+            echo "<p>", htmlspecialchars($row['dat_kon']), "</p>";
         }
     }
 } catch (PDOException $e) {
