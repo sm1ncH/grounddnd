@@ -15,6 +15,9 @@ try {
         $stmt2->execute([$row['user_id']]);
         while ($row2 = $stmt2->fetch(PDO::FETCH_ASSOC)) {
             echo "<p>", htmlspecialchars($row2['name']), "</p>";
+            echo "<p>", htmlspecialchars($row2['surname']), "</p>";
+            // date
+            echo "<p>", htmlspecialchars($row['date']), "</p>";
         }
     }
 } catch (PDOException $e) {
