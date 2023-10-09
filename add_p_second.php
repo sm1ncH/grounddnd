@@ -38,10 +38,11 @@ try {
                 // Validate file type and extension
                 if (in_array($imageExtension, $allowedExtensions) && getimagesize($imageTmpPath)) {
                     $newImageFileName = md5(time() . $imageName) . '.' . $imageExtension;
-                    $destImagePath =  $newImageFileName;
+                    $destImagePath = $imageUploadDir . $newImageFileName;
 
                     if (move_uploaded_file($imageTmpPath, $destImagePath)) {
                         // Insert each image into the 'slika' table
+                        $destImagePath = $newImageFileName;
                         $slika_id = insertSlika($pdo, $destImagePath);
 
                         if ($slika_id !== false) {
