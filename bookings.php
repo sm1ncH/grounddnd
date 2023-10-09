@@ -14,7 +14,7 @@ try {
         $stmt2 = $pdo->prepare("SELECT * FROM users WHERE id = ?");
         $stmt2->execute([$row['user_id']]);
         while ($row2 = $stmt2->fetch(PDO::FETCH_ASSOC)) {
-            echo "<p>", htmlspecialchars($row2['ime']), "</p>";
+            echo "<p>", htmlspecialchars($row2['name']), "</p>";
         }
     }
 } catch (PDOException $e) {
