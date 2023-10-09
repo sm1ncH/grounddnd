@@ -1,0 +1,91 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  color: #484848;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 5% 10px 5%;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  margin-left: 10px;
+  color: #ff5a5f;
+  text-decoration: none;
+  border: 1px solid #ff5a5f;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+header a:hover {
+  background-color: #ff5a5f;
+  color: #fff;
+}
+
+header svg {
+  fill: #ff5a5f;
+  cursor: pointer;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+#profile {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#profile_picture button,
+#profile_details button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-image: linear-gradient(90deg, #ff7a18, #fd3a2d);
+  transition: background-image 0.4s;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#profile_picture button:hover,
+#profile_details button:hover {
+  background-image: linear-gradient(90deg, #fd3a2d, #ff7a18);
+}
+
+#profile_details label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#profile_details input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+#user_icon {
+  height: 20px;
+}

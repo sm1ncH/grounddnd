@@ -1,0 +1,10 @@
+1. v booking.php poštimaj da bo minimalni možni date tisti ki je prost nazadnje  +
+2. da se to vnese v bazo   +
+
+style  -
+
+signup ne dela  -
+
+add property  +
+
+add sliko propertyju -
