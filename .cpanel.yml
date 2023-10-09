@@ -1,0 +1,19 @@
+---
+deployment:
+  tasks:
+    
+- export DEPLOYPATH=/home/
+- |
+  if [ -d "$DEPLOYPATH" ]; then
+    echo "Destination directory $DEPLOYPATH exists."
+  else
+    echo "Error: Destination directory $DEPLOYPATH does not exist."
+    exit 1
+  fi
+- /bin/cp -R .vscode $DEPLOYPATH || exit 1
+- /bin/cp -R assets $DEPLOYPATH || exit 1
+- /bin/cp -R css $DEPLOYPATH || exit 1
+- /bin/cp -R fonts $DEPLOYPATH || exit 1
+- /bin/cp -R img $DEPLOYPATH || exit 1
+- /bin/cp -R js $DEPLOYPATH || exit 1
+- /bin/cp index.html $DEPLOYPATH || exit 1
