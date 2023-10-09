@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="edit_property.php">
+</head>
+<body>
 <?php
 require_once 'baza.php';
 require_once 'cookie.php';
@@ -5,7 +14,7 @@ require_once 'cookie.php';
 if (!isset($_SESSION['id'])) {
     echo "nisi prijavljen";
 } else {
-    echo "<a href='logout.php'>logout</a>";
+    echo "<a href='index.php'>Home</a>";
 }
 
 $id = $_GET['id'];
@@ -29,3 +38,6 @@ try {
 <?php
     require_once 'alerts.php';
 ?>
+
+</body>
+</html>
