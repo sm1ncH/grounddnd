@@ -71,9 +71,6 @@ if (isset($_POST['submit2'])) {
         } else {
             echo "<a href='logout.php'>logout</a>";
         }
-        if (isset($_SESSION['id'])) {
-            echo "<a href='add_property.php'>Add property</a>";
-        }
         
         // profile icon svg link with link to profile.php
         if (isset($_SESSION['id'])) {
