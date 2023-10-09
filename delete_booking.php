@@ -11,8 +11,12 @@ $booking_id = $_GET['id'];
 try {
     $stmt = $pdo->prepare("DELETE FROM bookings WHERE id = ?");
     $stmt->execute([$booking_id]);
+    setcookie('alert', 'Booking deleted successfully');
+    setcookie('good', 1);
     header("Location: index.php");
 } catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
+    setcookie('alert', 'Error: ' . $e->getMessage());
+    setcookie('error', 1);
+    header("Location: index.php");
 }
 ?>

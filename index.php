@@ -12,7 +12,7 @@
        require_once 'baza.php';
        require_once 'cookie.php';
     if (!isset($_SESSION['id'])) {
-        echo '<a href="login.html">Login</a>';
+        echo '<a href="loginpage.php">Login</a>';
         echo "<a href='signup.php'>signup</a>";
     } else {
         echo "<a href='logout.php'>logout</a>";
@@ -67,5 +67,8 @@
     }
     ?>
     </main>
+    <?php
+    require_once 'alerts.php';
+    ?>
 </body>
 </html>

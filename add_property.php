@@ -34,5 +34,8 @@ require_once 'cookie.php';
     <input type="file" name="slika[]" required multiple/>
     <input type="submit" name="submit" placeholder="submit">
     </form>
+    <?php
+    require_once 'alerts.php';
+    ?>
 </body>
 </html>

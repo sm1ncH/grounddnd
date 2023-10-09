@@ -32,4 +32,8 @@
       </button>
     </form>
   </body>
+  <?php
+  require_once 'cookie.php';
+  require_once 'alerts.php';
+  ?>
 </html>

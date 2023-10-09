@@ -28,6 +28,9 @@
         <input type="submit" name="submit" value="Sign Up" />
     </form>
 </body>
+<?php
+    require_once 'alerts.php';
+    ?>
 </html>
 
 

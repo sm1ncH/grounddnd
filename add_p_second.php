@@ -51,8 +51,9 @@ try {
                         }
                     }
                 } else {
-                    // Handle invalid file types or extensions
-                    // You can set an error message and redirect here
+                    setcookie('alert', "Uporabili ste napačni format slike. Prosimo, da uporabite .jpg, .jpeg, .png ali .gif formate");
+                    setcookie('warning', 1);
+                    header('Location: index.php');
                 }
             }
 
@@ -64,25 +65,25 @@ try {
                 $stmt3->bindParam(':propertyId', $propertyId, PDO::PARAM_INT);
 
                 if ($stmt3->execute()) {
-                    setcookie('prijava', "Hvala za objavo!");
+                    setcookie('alert', "Hvala za objavo!");
                     setcookie('good', 1);
                     header('Location: index.php');
                     exit();
                 } else {
-                    setcookie('prijava', "Error: " . $stmt3->errorInfo()[2]);
+                    setcookie('alert', "Error: " . $stmt3->errorInfo()[2]);
                     setcookie('error', 1);
                     header('Location: index.php');
                     exit();
                 }
             }
         } else {
-            setcookie('prijava', 'Hvala za objavo!');
+            setcookie('alert', 'Hvala za objavo!');
             setcookie('good', 1);
             header('Location: index.php');
             exit();
         }
     } else {
-        setcookie('prijava', "Error: " . $stmt->errorInfo()[2]);
+        setcookie('alert', "Error: " . $stmt->errorInfo()[2]);
         setcookie('error', 1);
         header('Location: index.php');
         exit();

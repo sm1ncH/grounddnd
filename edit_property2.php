@@ -18,10 +18,13 @@ if (isset($_POST['id'])) {
         // Update property information in the 'properties' table using prepared statement
         $stmt = $pdo->prepare("UPDATE properties SET ime = ?, metri = ?, cena = ? WHERE id = ?");
         $stmt->execute([$ime, $metri, $cena, $id]);
-
+        setcookie('alert', 'Property updated successfully');
+        setcookie('good', 1);
         header("Location: index.php");
     } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        setcookie('alert', 'Error: ' . $e->getMessage());
+        setcookie('error', 1);
+        header("Location: index.php");
     }
 }
 ?>

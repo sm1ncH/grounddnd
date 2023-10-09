@@ -47,17 +47,22 @@ try {
     $rowCount = $stmt->rowCount();
 
     if ($rowCount == 1) {
-        header("Location: login.html");
+        setcookie('alert', "Uporabnik že obstaja.");
+        setcookie('error', 1);
+        header("Location: signup.html");
         exit; // Make sure you exit after a header redirect
     } else {
         // Insert hashed password instead of plain password
         $stmt = $pdo->prepare("INSERT INTO users (name, surname, email, password, kraj_id, phone) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->execute([$n, $s, $e, $hashedPassword, $k, $ph]);
+        setcookie('alert', "Registracija uspešna!");
+        setcookie('good', 1);
         header("Location: index.php");
         exit; // Make sure you exit after a header redirect
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
+
 ?>
 

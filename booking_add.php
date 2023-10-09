@@ -14,9 +14,13 @@ if ($date_end === "" || $date_start === "") {
 else{try {
     $stmt = $pdo->prepare("INSERT INTO bookings (dat_zac, dat_kon, property_id, user_id) VALUES (?, ?, ?, ?)");
     $stmt->execute([$date_start, $date_end, $property_id, $user_id]);
+    setcookie('alert', 'Booking added successfully');
+    setcookie('good', 1);
     header("Location: index.php");
 } catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
+    setcookie('alert', 'Error: ' . $e->getMessage());
+    setcookie('error', 1);
+    header("Location: index.php");
 }}
 
 ?>
