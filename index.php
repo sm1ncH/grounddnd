@@ -46,7 +46,7 @@
             if (isset($_SESSION['id'])) {
                 echo "<a href='booking.php?id=" . $row['id'] . "'>Booking</a>";
             }
-            if (isset($_SESSION['id'])) {
+            if (isset($_SESSION['id'])==1) {
                 echo "<a href='edit_property.php?id=" . $row['id'] . "'>Edit</a>";
                 echo "<a href='delete_property.php?id=" . $row['id'] . "'>Delete</a>";
             }
