@@ -50,6 +50,8 @@
                 if($_SESSION['id'] == 1){
                 echo "<a href='edit_property.php?id=" . $row['id'] . "'>Edit</a>";
                 echo "<a href='delete_property.php?id=" . $row['id'] . "'>Delete</a>";
+                // echo check bookings on bookings.php
+                echo "<a href='bookings.php?id=" . $row['id'] . "'>Bookings</a>";
                 }
             }
             echo "</div>";
