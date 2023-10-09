@@ -1,3 +1,8 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/bookings.css">
+</head>
 <?php
 require_once 'baza.php';
 require_once 'cookie.php';
@@ -25,3 +30,4 @@ try {
     echo "Error: " . $e->getMessage();
 }
 ?>
+</html>

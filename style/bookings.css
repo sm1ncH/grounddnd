@@ -1,0 +1,46 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 2em;
+  color: #484848;
+}
+
+p {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+/* Row styling */
+:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* Hover effect for better interaction */
+:hover {
+  background-color: #e7e7e7;
+}
+
+/* Styling for user details (Name & Surname) */
+p:nth-child(odd) {
+  font-weight: bold;
+  margin-right: 1em; /* Space between name and surname */
+}
+
+/* Styling for date details */
+p:nth-child(even) {
+  font-size: 0.9em;
+  color: #888888; /* Slightly muted color for date details */
+}
+
+/* Additional padding between different user bookings */
+p:last-child {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #dddddd; /* Adds a line below each booking for better separation */
+  margin-bottom: 1em;
+}
