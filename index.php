@@ -26,7 +26,7 @@
         echo "<a href='profile.php'><img src='slike/profile/user.png' id='user_icon'></a>";
     }
     if (isset($_SESSION['id'])) {
-        if($_SESSION['id'] == 1){
+        if($_SESSION['id'] == 7){
         echo "<a href='admin.php'>Admin</a>";
         }
     }
@@ -52,7 +52,7 @@
                 echo "<a href='booking.php?id=" . $row['id'] . "'>Booking</a>";
             }
             if (isset($_SESSION['id'])) {
-                if($_SESSION['id'] == 1){
+                if($_SESSION['id'] == 7){
                 echo "<a href='edit_property.php?id=" . $row['id'] . "'>Edit</a>";
                 echo "<a href='delete_property.php?id=" . $row['id'] . "'>Delete</a>";
                 // echo check bookings on bookings.php
