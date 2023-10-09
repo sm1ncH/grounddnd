@@ -25,6 +25,11 @@
     if (isset($_SESSION['id'])) {
         echo "<a href='profile.php'><img src='slike/profile/user.png' id='user_icon'></a>";
     }
+    if (isset($_SESSION['id'])) {
+        if($_SESSION['id'] == 1){
+        echo "<a href='admin.php'>Admin</a>";
+        }
+    }
 
     ?>
     </header>
