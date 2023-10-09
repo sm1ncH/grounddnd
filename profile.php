@@ -104,5 +104,8 @@ if (isset($_POST['submit2'])) {
             </div>
         </div>
     </main>
+    <?php
+    require_once 'alerts.php';
+    ?>
 </body>
 </html>

@@ -20,12 +20,13 @@ if (isset($_GET['id'])) {
         // Delete property from the 'properties' table
         $stmt = $pdo->prepare("DELETE FROM properties WHERE id = ?");
         $stmt->execute([$id]);
-
-        
-
+        setcookie('alert', 'Property deleted successfully');
+        setcookie('good', 1);
         header("Location: index.php");
     } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        setcookie('alert', 'Error: ' . $e->getMessage());
+        setcookie('error', 1);
+        header("Location: index.php");
     }
 }
 ?>

@@ -31,6 +31,9 @@ try {
     echo "Error: " . $e->getMessage();
 }
 ?>
+<?php
+    require_once 'alerts.php';
+    ?>
 </div>
 </body>
 </html>

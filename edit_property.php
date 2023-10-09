@@ -26,3 +26,6 @@ try {
     <input type="text" name="cena" value="<?php echo htmlspecialchars($row['cena']); ?>">
     <input type="submit" value="Submit">
 </form>
+<?php
+    require_once 'alerts.php';
+?>

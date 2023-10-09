@@ -111,6 +111,9 @@ try {
             <input type="submit" value="Rezerviraj">
         </form>
     </div>
+    <?php
+    require_once 'alerts.php';
+    ?>
 </body>
 </html>
 <?php

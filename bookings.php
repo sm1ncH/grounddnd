@@ -42,5 +42,8 @@ try {
 }
 ?>
 </div>
+<?php
+    require_once 'alerts.php';
+    ?>
 </body>
 </html>
