@@ -31,7 +31,7 @@ require_once 'cookie.php';
         }
         ?>
     </select>
-    <input type="file" name="slika[]" accept=".png, .jpg .jpeg .gif" required multiple/>
+    <input type="file" name="slika[]" required multiple/>
     <input type="submit" name="submit" placeholder="submit">
     </form>
 </body>
