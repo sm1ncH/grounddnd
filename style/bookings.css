@@ -10,37 +10,32 @@ p {
   margin: 0.5em 0;
   padding: 0.5em;
   display: inline-block;
-}
-
-/* Row styling */
-:nth-child(odd) {
   background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
 }
 
-:nth-child(even) {
-  background-color: #f1f1f1;
-}
-
-/* Hover effect for better interaction */
-:hover {
-  background-color: #e7e7e7;
+/* Alternating colors for every other row */
+p:nth-child(4n + 1),
+p:nth-child(4n + 2) {
+  background-color: #f8f8f8;
 }
 
 /* Styling for user details (Name & Surname) */
-p:nth-child(odd) {
+p:nth-child(4n + 1),
+p:nth-child(4n + 2) {
   font-weight: bold;
   margin-right: 1em; /* Space between name and surname */
 }
 
 /* Styling for date details */
-p:nth-child(even) {
+p:nth-child(4n + 3),
+p:nth-child(4n + 4) {
   font-size: 0.9em;
   color: #888888; /* Slightly muted color for date details */
 }
 
-/* Additional padding between different user bookings */
-p:last-child {
-  padding-bottom: 1em;
-  border-bottom: 1px solid #dddddd; /* Adds a line below each booking for better separation */
+/* Additional spacing between different user bookings */
+p:nth-child(4n) {
   margin-bottom: 1em;
 }
