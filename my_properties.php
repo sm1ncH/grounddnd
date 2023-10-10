@@ -15,7 +15,12 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="style/my_properties.css">
 </head>
 <body>
+    <header>
+        <a href='index.php'>Home</a>
+    </header>
     <div id="row">
+        
+    
 <?php
 try {
     $stmt = $pdo->query("SELECT * FROM properties WHERE user_id = " . $_SESSION['id']);
