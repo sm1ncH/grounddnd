@@ -20,21 +20,10 @@ just like you would with Airbnb, but with our own unique flavor.
 
 4. **Start the development server**:
 
-You should now have the app running on `http://localhost:3000`!
 
-## 🤝 Contributing
+##  What I learned through the project
 
-Contributions, issues, and feature requests are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+- **I learned**:
+    - How to design a webpage
+    - How to make a webpage that is working
 
-## 💖 Support
-
-If you find any bugs or have a feature request, please create an issue on GitHub. For major concerns or business inquiries, feel free to email us at `support@grounddnd.com`.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## 👏 Acknowledgements
-
-- All the `grounddnd` hosts and users around the world.
-- Icons and images provided by [IconSource](https://www.iconsources.com) and [ImageDB](https://www.imagedb.com).
