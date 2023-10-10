@@ -23,7 +23,6 @@ try {
         echo "<p>", htmlspecialchars($row['name']), "</p>";
         echo "<p>", htmlspecialchars($row['surname']), "</p>";
         echo "<p>", htmlspecialchars($row['email']), "</p>";
-        echo "<p>", htmlspecialchars($row['password']), "</p>";
         echo "<button><a href='delete_user.php?id=" . $row['id'] . "'>Delete</a></button>";
         echo "</div>";
     }

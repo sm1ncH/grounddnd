@@ -59,6 +59,15 @@
                 echo "<a href='bookings.php?id=" . $row['id'] . "'>Bookings</a>";
                 }
             }
+            // if you made a property and your're not admin you can edit or delete it
+            if (isset($_SESSION['id'])) {
+                if($_SESSION['id'] == $row['user_id']){
+                echo "<a href='edit_property.php?id=" . $row['id'] . "'>Edit</a>";
+                echo "<a href='delete_property.php?id=" . $row['id'] . "'>Delete</a>";
+                // echo check bookings on bookings.php
+                echo "<a href='bookings.php?id=" . $row['id'] . "'>Bookings</a>";
+                }
+            }
             echo "</div>";
             echo "</div>";
         }
