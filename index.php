@@ -20,7 +20,10 @@
     if (isset($_SESSION['id'])) {
         echo "<a href='add_property.php'>Add property</a>";
     }
-    
+    // see your properties
+    if (isset($_SESSION['id'])) {
+        echo "<a href='my_properties.php'>My properties</a>";
+    }
     // profile icon svg link with link to profile.php
     if (isset($_SESSION['id'])) {
         echo "<a href='profile.php'><img src='slike/profile/user.png' id='user_icon'></a>";
@@ -58,12 +61,6 @@
                 // echo check bookings on bookings.php
                 echo "<a href='bookings.php?id=" . $row['id'] . "'>Bookings</a>";
                 }
-                if($_SESSION['id'] == $row['user_id']||$_SESSION['id'] != 7){
-                    echo "<a href='edit_property.php?id=" . $row['id'] . "'>Edit</a>";
-                    echo "<a href='delete_property.php?id=" . $row['id'] . "'>Delete</a>";
-                    // echo check bookings on bookings.php
-                    echo "<a href='bookings.php?id=" . $row['id'] . "'>Bookings</a>";
-                    }
             }
             // if you made a property and your're not admin you can edit or delete it
             echo "</div>";
