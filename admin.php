@@ -12,6 +12,7 @@ error_reporting(E_ALL);
     <meta charset="UTF-8">
     <title>Admin</title>
     <link rel="stylesheet" href="style/admin.css">
+    <link rel="stylesheet" href="style/admin.css">
 </head>
 <body>
     <div id="row">
