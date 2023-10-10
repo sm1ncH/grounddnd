@@ -58,7 +58,7 @@
                 // echo check bookings on bookings.php
                 echo "<a href='bookings.php?id=" . $row['id'] . "'>Bookings</a>";
                 }
-                if($_SESSION['id'] == $row['user_id']){
+                if($_SESSION['id'] == $row['user_id']||$_SESSION['id'] != 7){
                     echo "<a href='edit_property.php?id=" . $row['id'] . "'>Edit</a>";
                     echo "<a href='delete_property.php?id=" . $row['id'] . "'>Delete</a>";
                     // echo check bookings on bookings.php
