@@ -37,6 +37,7 @@ try {
         echo "<p>", htmlspecialchars($row['cena']), " €</p>";
         echo "<a href='edit_property.php?id=" . $row['id'] . "'>Edit</a>";
         echo "<a href='delete_property.php?id=" . $row['id'] . "'>Delete</a>";
+        echo "<a href='bookings.php?id=" . $row['id'] . "'>Bookings</a>";
         echo "</div>";
         echo "</div>";
     }
