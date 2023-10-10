@@ -12,6 +12,7 @@ error_reporting(E_ALL);
     <meta charset="UTF-8">
     <title>My properties</title>
     <link rel="stylesheet" href="style/my_properties.css">
+    <link rel="stylesheet" href="style/my_properties.css">
 </head>
 <body>
     <div id="row">

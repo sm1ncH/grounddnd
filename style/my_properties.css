@@ -1,0 +1,59 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 2em;
+  color: #484848;
+  line-height: 1.6;
+}
+
+#row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* For a consistent gap between properties */
+}
+
+#property {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  width: 250px; /* Adjust as per your preference */
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#property:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#property img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#details {
+  padding: 16px;
+}
+
+#details h3 {
+  margin-top: 0;
+}
+
+a {
+  display: inline-block;
+  background-color: #ff5a5f;
+  color: #ffffff;
+  padding: 6px 12px;
+  text-decoration: none;
+  margin: 10px 5px 0;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+a:hover {
+  background-color: #ff3b45;
+}
