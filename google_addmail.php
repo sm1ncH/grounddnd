@@ -23,7 +23,7 @@ include_once "alerts.php"; // Include this at the beginning
             <input type="password" id="geslo" name="geslo" required><br><br>
             <input type="submit" value="Pošlji">
         </form>
-        <p>Nočeš povezati računa? <a href="login.php">Pojdi na prijavo</a></p>
+        <p>Nočeš povezati računa? <a href="loginpage.php">Pojdi na prijavo</a></p>
     </div>
 </div>
 
