@@ -28,13 +28,13 @@ try {
             // Invalid login credentials
             setcookie('alert', "Napačno geslo.");
             setcookie('error', 1);
-            header("Location: index.php");
+            header("Location: google_addmail.php");
             exit(); // Make sure to exit after a header redirect
         }
     } else {
         setcookie('alert', "Uporabnik ne obstaja.");
         setcookie('error', 1);
-        header("Location: index.php");
+        header("Location: google_addmail.php");
         exit(); // Make sure to exit after a header redirect
     }
 } catch (PDOException $e) {
