@@ -52,13 +52,13 @@ if (isset($_GET["code"])) {
                 header("Location: google_addmail.php");
             }
             else{
-                    $_SESSION['id'] = $row['id'];
-                    $_SESSION['ime'] = $row['ime'];
-                    $_SESSION['priimek'] = $row['priimek'];
-                    $_SESSION['email'] = $row['email'];
-                    setcookie('prijava', "Prijava uspešna.");
-                    setcookie('good', 1);
-                    header("Location: index.php");
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['ime'] = $row['ime'];
+                $_SESSION['priimek'] = $row['priimek'];
+                $_SESSION['email'] = $row['email'];
+                setcookie('prijava', "Prijava uspešna.");
+                setcookie('good', 1);
+                header("Location: index.php");
             }
         }
     }
