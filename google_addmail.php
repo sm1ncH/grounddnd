@@ -18,7 +18,7 @@ include_once "alerts.php"; // Include this at the beginning
         <p>Poveži svoj trenutni račun z svojim Google računom za lažjo prijavo:</p>
         <form action="googlelink.php" method="post">
             <label for="email">Mail:</label>
-            <input type="text" id="email" name="email" required readonly value="<?php echo $_SESSION['email'] ?>"><br><br>
+            <input type="text" id="email" name="email" required readonly value="<?php echo $_SESSION['mail'] ?>"><br><br>
             <label for="geslo">Geslo:</label>
             <input type="password" id="geslo" name="geslo" required><br><br>
             <input type="submit" value="Pošlji">
