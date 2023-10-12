@@ -22,7 +22,6 @@ if ($result !== false) {
         $_SESSION['email'] = $row['email'];
         setcookie('prijava', "Prijava uspešna.");
         setcookie('good', 1);
-        $_SESSION["googleregister"] = 0;
         header('Location: index.php');
         exit();
     } 

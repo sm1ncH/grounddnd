@@ -25,7 +25,7 @@
   </div>
 </div>
 <?php
-include_once "alert.php";
+include_once "alerts.php";
 ?>
 </body>
 </html>
