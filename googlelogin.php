@@ -33,7 +33,7 @@ if (isset($_GET["code"])) {
 
         
         $sql = "SELECT * FROM users WHERE email = :mail";
-        $stmt = $conn->prepare($sql);
+        $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':mail', $mail, PDO::PARAM_STR);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);

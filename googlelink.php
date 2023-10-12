@@ -5,7 +5,7 @@ $email = $_POST['email'];
 $password = $_POST['geslo'];
 
 $sql = "SELECT * FROM users WHERE email = ?";
-$stmt = $conn->prepare($sql);
+$stmt = $pdo->prepare($sql);
 $stmt->execute([$email]); // Pass parameters as an array
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -13,9 +13,9 @@ if ($result !== false) {
     $hash = $result['geslo'];
     if (password_verify($password, $hash)) {
         $sql = "UPDATE users SET google_id = ? WHERE id = ?";
-        $stmt = $conn->prepare($sql);
+        $stmt = $pdo->prepare($sql);
         $stmt->execute([$_SESSION['google_id'], $result['id']]);
-        
+
         $_SESSION['id'] = $row['id'];
         $_SESSION['ime'] = $row['ime'];
         $_SESSION['priimek'] = $row['priimek'];
@@ -39,5 +39,5 @@ if ($result !== false) {
     exit();
 }
 
-$conn = null; // Close the connection
+$pdo = null; // Close the connection
 ?>
