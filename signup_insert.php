@@ -49,7 +49,7 @@ try {
     if ($rowCount == 1) {
         setcookie('alert', "Uporabnik že obstaja.");
         setcookie('error', 1);
-        header("Location: signup.html");
+        header("Location: signup.php");
         exit; // Make sure you exit after a header redirect
     } else {
         // Insert hashed password instead of plain password
