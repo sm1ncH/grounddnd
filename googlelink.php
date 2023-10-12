@@ -10,9 +10,9 @@ try {
     $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
     $stmt->execute([$email]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+
     if ($row) {
-        if (password_verify($p, $row['password'])) {
+        if (password_verify($password, $row['password'])) {
             // Successful login, password matches hash
             $stmt = $pdo->prepare("UPDATE users SET google_id = ? WHERE id = ?");
             $stmt->execute([$google_id, $row['id']]);

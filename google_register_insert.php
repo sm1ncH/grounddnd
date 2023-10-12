@@ -1,6 +1,6 @@
 <?php
 require_once 'baza.php';
-
+require_once 'cookie.php';
 $n = $_POST['name'];
 $s = $_POST['surname'];
 $e = $_POST['email'];

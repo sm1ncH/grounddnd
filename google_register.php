@@ -21,7 +21,7 @@
  <form action="google_register_insert.php" method="post">
   <input type="text" name="name" placeholder="Name" required value = "<?php echo $_SESSION['ime'] ?>">
         <input type="text" name="surname" placeholder="Surname" required value = "<?php echo $_SESSION['priimek'] ?>">
-        <input type="email" name="email" placeholder="Email" required value = "<?php echo $_SESSION['email'] ?>">
+        <input type="email" name="email" placeholder="Email" required value = "<?php echo $_SESSION['email'] ?>" readonly>
         <input type="password" name="password" placeholder="Password" required>
 
         <select name="kraj_id" required> <!-- Use name="kraj_id" -->
